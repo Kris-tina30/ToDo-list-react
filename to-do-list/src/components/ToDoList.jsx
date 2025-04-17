@@ -10,12 +10,14 @@ export default function ToDoList({ tasks, onDelete }) {
         {tasks.map((task, index) => (
           <li key={index} className="taskItem">
             <strong>{task.title}</strong>: {task.description}
-            <button
-              className="button taskButton"
-              onClick={() => onDelete(index)}
-            >
-              Done
-            </button>
+            <a href="/">
+              <button
+                className="button taskButton"
+                onClick={() => onDelete(index)}
+              >
+                Done
+              </button>
+            </a>
           </li>
         ))}
       </ul>
