@@ -1,1 +1,30 @@
+h2 {
+  margin-bottom: 10px;
+}
 
+.App {
+  text-align: center;
+}
+.form {
+  margin: 10px 0;
+}
+.input {
+  width: 25%;
+  margin: 10px 0;
+  padding: 15px 5px;
+  border: 1px solid rgb(0, 0, 0);
+  display: block;
+}
+.button {
+  width: 80px;
+  padding: 12px;
+  background-color: rgb(90, 223, 178);
+  border: none;
+  border-radius: 15px;
+}
+.taskItem {
+  margin: 10px 0;
+}
+.taskButton {
+  margin-left: 10px;
+}

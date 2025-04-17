@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 export default function ToDoList({ tasks, onDelete }) {
   return (
@@ -7,9 +8,14 @@ export default function ToDoList({ tasks, onDelete }) {
       <ul>
         {tasks.length === 0 && <li>No tasks yet...</li>}
         {tasks.map((task, index) => (
-          <li key={index}>
+          <li key={index} className="taskItem">
             <strong>{task.title}</strong>: {task.description}
-            <button onClick={() => onDelete(index)}>Done</button>
+            <button
+              className="button taskButton"
+              onClick={() => onDelete(index)}
+            >
+              Done
+            </button>
           </li>
         ))}
       </ul>

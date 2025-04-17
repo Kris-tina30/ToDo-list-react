@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../App.css";
 
 export default class InputForm extends Component {
   constructor(props) {
@@ -30,23 +31,27 @@ export default class InputForm extends Component {
   render() {
     return (
       <div>
-        <h2>New Task</h2>
-        <form onSubmit={this.handleSubmit}>
+        <h2>New Task:</h2>
+        <form onSubmit={this.handleSubmit} className="form">
           <input
+            className="input"
             type="text"
             placeholder="Your task"
             required
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <input
+          <textarea
+            className="input"
             type="text"
             placeholder="Describe it"
             required
             value={this.state.description}
             onChange={this.handleDescriptionChange}
           />
-          <button type="submit">Add</button>
+          <button className="button" type="submit">
+            Add
+          </button>
         </form>
       </div>
     );
